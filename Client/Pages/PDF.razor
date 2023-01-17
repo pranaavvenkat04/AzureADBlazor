@@ -1,0 +1,38 @@
+﻿@using AzureADBlazor.Shared
+@inject HttpClient Http
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@attribute [Authorize(Roles = "Reader")]
+@page "/PDF"
+
+<PageTitle>PDF</PageTitle>
+
+
+<h1>PDF</h1>
+@if (pdf == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+
+    <embed src=@DisplayPDF type="application/pdf" width="100%" height=800 />
+
+}
+
+
+@code {
+    private HelloWorldPDF? pdf;
+    private string? DisplayPDF;
+
+    protected override async Task OnInitializedAsync()
+    {
+        pdf = await Http.GetFromJsonAsync<HelloWorldPDF>("/PDFBytes");
+        if(pdf != null)
+        {
+            DisplayPDF = "data:application/pdf;base64," + Convert.ToBase64String(pdf.pdfBits);
+        }
+
+    }
+ 
+}
