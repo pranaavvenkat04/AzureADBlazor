@@ -54,7 +54,7 @@ public class BodyComponent : IComponent
 	}
 
 	private void ComposeDisclaimer(IContainer container)
-	{
+	{ 
 		var textSytle = TextStyle.Default.FontFamily("Roboto-Light").FontSize(8.00f).FontColor("0D787B");
 
 		container.Column(column =>
