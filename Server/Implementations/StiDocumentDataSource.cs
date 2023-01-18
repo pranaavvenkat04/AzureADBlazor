@@ -17,18 +17,18 @@ namespace AzureADBlazor.Server.Implementations
                     Zip = "11801",
                     Phone = new Phone
                     {
-                        Name = "(844) 522-8847",
-                        Url = "(844) 522-8847"
+                        Name = "(800) 345-6948",
+                        Url = "8003456948"
                     },
                     Website = new Website
                     {
-                        Name = "https://www.acutis.com/",
-                        Url = "https://www.acutis.com/"
+                        Name = "https://www.nyit.edu/",
+                        Url = "https://www.nyit.edu/"
                     },
                     Email = new Email
                     {
-                        Name = "someone@acutis.com",
-                        Url = "someone@acutis.com"
+                        Name = "asknyit@nyit.edu",
+                        Url = "asknyit@nyit.edu"
                     }
                 },
                 ReportStatus = new ReportStatus(),
@@ -51,18 +51,18 @@ namespace AzureADBlazor.Server.Implementations
                     {
                         Name = new Name
                         {
-                            First = "Walter",
-                            Last = "White"
+                            First = "Pranaav",
+                            Last = "Venkat"
                         },
-                        DateOfBirth = new DateTime(1964, 1, 1),
+                        DateOfBirth = new DateTime(2004, 11, 17),
                         Gender = "Male",
-                        Id = "55",
+                        Id = "1309853",
                         Address = new Address
                         {
-                            Address1 = "308 Belmont Avenue",
-                            City = "Ontario",
-                            State = "CA",
-                            Zip = "91764",
+                            Address1 = "671 Lincoln Ave",
+                            City = "Winnetka",
+                            State = "IL",
+                            Zip = "60093",
                         },
                         HomePhone = "(567) 257-1634"
 
@@ -71,30 +71,31 @@ namespace AzureADBlazor.Server.Implementations
                     {
                         Name = new Name
                         {
-                            First = "Gregory",
-                            Last = "House"
+                            First = "Pam",
+                            Last = "Halpert"
                         }
                     },
                     Organization = new Organization
                     {
-                        Name = "Princeton–Plainsboro Teaching Hospital",
+                        Name = "Freshman Advisor",
                         Phone = "(932) 443-7721",
                         Address = new Address
                         {
-                            City = "Princeton",
-                            Address1 = "25 Plainsboro Road",
-                            State = "NJ",
-                            Zip = "08540"
+                            City = "Old Westbury",
+                            Address1 = "Northern Boulvard, Valentines Lane",
+                            State = "NY",
+                            Zip = "11568"
                         }
                     }
                 },
                 PrintDate = DateTime.Now,
                 StiPanelTestResults = new HashSet<TestResult<Organism>>
                 {
-                    new TestResult<Organism>(){Result = "Detected" , Test = new Organism{Name = "Test 1"}},
-                    new TestResult<Organism>(){Result = "Not Detected" , Test = new Organism{Name = "Test 2"} },
-                    new TestResult<Organism>(){Result = "Detected" , Test = new Organism{Name = "Test 3"} },
-                    new TestResult<Organism>(){Result = "Not Detected" , Test = new Organism{Name = "Test 4"} }
+                    new TestResult<Organism>(){Result = "A" , Test = new Organism{Name = "Computer Programming II" , CourseCode = "CSCI 185", Credits = 3}},
+                    new TestResult<Organism>(){Result = "A" , Test = new Organism{Name = "Calculus II", CourseCode = "MATH 180", Credits = 4} },
+                    new TestResult<Organism>(){Result = "A" , Test = new Organism{Name = "General Physics I", CourseCode = "PHYS 170", Credits = 4} },
+                    new TestResult<Organism>(){Result = "A" , Test = new Organism{Name = "Foundations of Writing Composition", CourseCode = "FCWR 101", Credits = 3} },
+                    new TestResult<Organism>(){Result = "A" , Test = new Organism{Name = "Career Discovery", CourseCode = "ETCS 105", Credits = 2} }
                 }
 
             };

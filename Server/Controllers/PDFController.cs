@@ -1,5 +1,6 @@
 using AzureADBlazor.Server.Implementations;
 using AzureADBlazor.Shared;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AzureADBlazor.Server.Controllers
@@ -20,7 +21,6 @@ namespace AzureADBlazor.Server.Controllers
         {
             var generateService = new GenerateService();
             var pdf = generateService.GeneratePDF();
-
 
             return new HelloWorldPDF { pdfBits = pdf };
 
