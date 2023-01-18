@@ -37,8 +37,8 @@ public class HeaderComponent : IComponent
 		container.Row(row =>
 		{
 			row.RelativeItem().Element(HeaderMainLogoElement);
-			row.RelativeItem().Element(HeaderMainInfoElement);
-			row.RelativeItem().Element(HeaderMainTitleElement);
+			row.RelativeItem().AlignBottom().AlignLeft().Element(HeaderMainInfoElement);
+			row.RelativeItem().AlignLeft().Element(HeaderMainTitleElement);
 		});
 	}
 
@@ -46,11 +46,10 @@ public class HeaderComponent : IComponent
 	{
 		container.Column(column =>
 		{
-			column.Spacing(2.00f);
 
 			var imagesFolder = "C:\\Users\\Pvenkatsubramanian\\AzureADBlazor\\Server\\Images\\";
 
-            column.Item().Width(150).Image(Path.Combine(imagesFolder, "NYIT_LOGO.png"), ImageScaling.FitArea);
+            column.Item().Width(150).MaxWidth(150).Image(Path.Combine(imagesFolder, "NYIT_LOGO.png"), ImageScaling.FitArea);
 
 		});
 	}
@@ -58,12 +57,11 @@ public class HeaderComponent : IComponent
     {
         container.Column(column =>
         {
-            column.Spacing(0.00f);
-            column.Item().Container().Row(row =>
+            column.Item().Width(100).Container().Row(row =>
             {
                 row.RelativeItem().Column(addressColumn =>
                 {
-                    addressColumn.Spacing(-3.00f);
+                    //addressColumn.Spacing(-3.00f);
 
                     addressColumn.Item().Text(text =>
                     {

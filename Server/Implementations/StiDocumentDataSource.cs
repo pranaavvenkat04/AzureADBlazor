@@ -22,7 +22,7 @@ namespace AzureADBlazor.Server.Implementations
                     },
                     Website = new Website
                     {
-                        Name = "https://www.nyit.edu/",
+                        Name = "www.nyit.edu",
                         Url = "https://www.nyit.edu/"
                     },
                     Email = new Email
